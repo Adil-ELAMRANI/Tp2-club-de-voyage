@@ -1,0 +1,32 @@
+/*
+Theme Name: theme-club-voyage
+Theme URI: https://referenced.ca
+Author: Adil Mostapha EL AMRANI
+Author URI: https://github.com/Adil-ELAMRANI
+Description: Thème de base développer dans le cadre du cours 4W4
+Version: 1.0
+Tested up to: 6.2
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Adil
+*/
+
+// Importation des variables
+@import "variables/couleurs";
+@import "variables/dimensions";
+
+// Importation de base
+//@import "base/reset";
+
+// Importation des composants
+@import "composants/header";
+@import "composants/registration-form";
+@import "composants/hero";
+@import "composants/menu";
+@import "composants/photo-grid";
+
+// Layout global
+@import "layout/entete";
+@import "layout/principal";
+@import "layout/footer";

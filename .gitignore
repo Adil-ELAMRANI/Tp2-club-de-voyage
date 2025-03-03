@@ -1,0 +1,23 @@
+# Ignorer les fichiers compilés
+*.css
+*.css.map
+
+# Ignorer les fichiers temporaires
+.sass-cache/
+*.tmp
+*.log
+
+# Ignorer les dossiers de node_modules ou autres dépendances
+node_modules/
+
+# Ignorer les fichiers système
+.DS_Store
+Thumbs.db
+
+# Ignorer les fichiers dist ou build
+dist/
+build/
+
+# Ignorer les fichiers de configuration spécifiques aux IDE
+.vscode/
+.idea/
