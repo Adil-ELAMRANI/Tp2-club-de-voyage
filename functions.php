@@ -43,6 +43,30 @@ function theme_tp_customize_register($wp_customize)
         'type' => 'text',
     ));
 
+    // adresse
+    $wp_customize->add_setting('hero_adresse', array(
+        'default' => __('Adil', 'theme_tp'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control('hero_adresse', array(
+        'label' => __('Adresse', 'theme_tp'),
+        'section' => 'hero_section',
+        'type' => 'text',
+    ));
+
+    // telephone
+    $wp_customize->add_setting('hero_telephone', array(
+        'default' => __('Adil', 'theme_tp'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control('hero_telephone', array(
+        'label' => __('Telephone', 'theme_tp'),
+        'section' => 'hero_section',
+        'type' => 'text',
+    ));
+
     // AUTEUR
     $wp_customize->add_setting('hero_auteur', array(
         'default' => __('Adil', 'theme_tp'),

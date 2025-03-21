@@ -1,5 +1,6 @@
 <!-- Footer Section -->
 
+
 <footer class="footer">
   <?php wp_footer(); ?>
   <div class="footer-top">
