@@ -1,5 +1,6 @@
 <!-- Footer Section -->
 
+
 <footer class="footer">
   <?php wp_footer(); ?>
   <div class="footer-top">
@@ -34,12 +35,9 @@
       </ul>
     </div>
     <div class="footer-col subscribe">
-      <h4>S'abonner</h4>
+      <h4>Recherche</h4>
       <div class="subscribe-form">
-        <form>
-          <input type="email" placeholder="Votre email">
-          <button type="submit" class="subscribe-button">Contact</button>
-        </form>
+        <?php get_search_form()  ?>
         <p>En vous abonnant, vous acceptez notre politique de confidentialité et nos conditions d'utilisation.</p>
       </div>
     </div>

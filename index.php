@@ -36,34 +36,35 @@
 </section>
 
 <section class="populaire global">
-<h2 class="photo-grid-title">Nos destinations favorites</h2>
+    <h2 class="photo-grid-title">Nos destinations favorites</h2>
     <div class="global">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <?php if (in_category('galerie')) {
-                    the_content();
-                } else { ?>
-                    <article>
-                        <div class="card card--big">
-                            <div class="carte__image">
-                                <?php
-                                if (has_post_thumbnail()) {
-                                    the_post_thumbnail('medium');
-                                }
-                                ?>
-                            </div>
-                            <div class="card__content">
-                                <h2 class="card__title"><?php the_title(); ?></h2>
-                                <p class="card__description"><?php echo wp_trim_words(get_the_excerpt(), 25, "..."); ?></p>
-                                <a href="<?php the_permalink(); ?>">Lire la suite</a>
-                            </div>
-                        </div>
-                    </article>
-                <?php } ?>
-        <?php endwhile;
+                <?php if (in_category('galerie')) { ?>
+                </div>
+    <div class="galerie">
+        <?php the_content(); ?>
+    <?php } else { ?>
+        <article>
+            <div class="card card--big">
+                <div class="carte__image">
+                    <?php
+                    if (has_post_thumbnail()) {
+                        the_post_thumbnail('medium');
+                    }
+                    ?>
+                </div>
+                <div class="card__content">
+                    <h2 class="card__title"><?php the_title(); ?></h2>
+                    <p class="card__description">
+                        <?php echo wp_trim_words(get_the_excerpt(), 25, "..."); ?>
+                    </p>
+                    <a href="<?php the_permalink(); ?>">Lire la suite</a>
+                </div>
+            </div>
+        </article>
+    <?php } ?>
+<?php endwhile;
         endif; ?>
-
-    </div>
-
 </section>
 
 
