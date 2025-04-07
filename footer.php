@@ -1,7 +1,8 @@
 <!-- Footer Section -->
 
+
 <footer class="footer">
-  <?php wp_footer(); ?>
+
   <div class="footer-top">
     <div class="footer-col">
       <h4>À propos de nous</h4>
@@ -55,5 +56,5 @@
 </footer>
 
 </body>
-
+<?php wp_footer(); ?>
 </html>

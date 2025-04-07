@@ -1,0 +1,23 @@
+// Composant : Bouton
+.button {
+    display: inline-block;
+    padding: $spacing / 2 $spacing;
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: $border-radius;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  
+    &--secondary {
+      background-color: $secondary-color;
+  
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  }

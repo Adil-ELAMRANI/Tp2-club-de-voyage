@@ -1,21 +1,53 @@
 /* === GALERIE === */
 .galerie {
-    gap: 0.8rem;
-    padding: 1.5rem;
-    background-color: #eee;
-    border-radius: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
-      transition: transform 0.3s ease-in-out;
-  
-      &:hover {
-        transform: scale(1.04);
-      }
+  gap: 0.8rem;
+  padding: 1.5rem;
+  background-color: #eee;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.04);
     }
   }
+}
+// Styles pour la section Galerie
+.galerie-section {
+  padding: 20px;
+  background-color: $background-light;
+
+  .galerie-global {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+}
+
+// Styles pour les boutons de catégorie
+.destination__bouton {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+
+  .category-button {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}

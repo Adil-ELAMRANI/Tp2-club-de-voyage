@@ -1,0 +1,17 @@
+// Composant : Section
+.section {
+    padding: $spacing * 2 0;
+    background-color: $background-color;
+  
+    &__inner {
+      max-width: $max-width;
+      margin: 0 auto;
+      padding: 0 $spacing;
+    }
+  
+    &__title {
+      color: $text-color;
+      font-size: 2rem;
+      margin-bottom: $spacing;
+    }
+  }
