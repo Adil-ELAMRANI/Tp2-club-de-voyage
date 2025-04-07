@@ -117,3 +117,55 @@ function theme_tp_customize_register($wp_customize)
 }
 
 add_action('customize_register', 'theme_tp_customize_register');
+
+function theme_personnalisation($wp_customize) {
+    $wp_customize->add_section('section_404', array(
+      'title' => __('Page 404', 'theme_tp'),
+      'priority' => 30,
+    ));
+  
+    $wp_customize->add_setting('image_404', array(
+      'default' => get_template_directory_uri() . '/images/image-404-default.jpg',
+      'sanitize_callback' => 'esc_url_raw'
+    ));
+  
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'image_404', array(
+      'label' => __('Image de fond', 'theme_tp'),
+      'section' => 'section_404',
+      'settings' => 'image_404',
+    )));
+  
+    $wp_customize->add_setting('titre_404', array(
+      'default' => "Oops, vous avez échoué sur l'île 404 !"
+    ));
+  
+    $wp_customize->add_control('titre_404', array(
+      'label' => __('Titre de la page 404', 'theme_tp'),
+      'section' => 'section_404',
+      'type' => 'text',
+    ));
+  
+    $wp_customize->add_setting('message_404', array(
+      'default' => "Pas de panique, cher membre explorateur ! 
+      Vous avez dérivé un peu trop loin des destinations de rêve que notre club a soigneusement sélectionnées pour vous. 
+      Reprenez votre périple en cliquant sur 'Accueil' pour découvrir à nouveau nos voyages d’exception !"
+    ));
+  
+    $wp_customize->add_control('message_404', array(
+      'label' => __('Message personnalisé', 'theme_tp'),
+      'section' => 'section_404',
+      'type' => 'textarea',
+    ));
+  
+    // Couleur du bouton et recherche
+    $wp_customize->add_setting('couleur_404', array(
+      'default' => '#ff9900'
+    ));
+  
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'couleur_404', array(
+      'label' => __('Couleur des boutons et de la zone de recherche', 'theme_tp'),
+      'section' => 'section_404',
+    )));
+  }
+  add_action('customize_register', 'theme_personnalisation');
+  
