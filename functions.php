@@ -12,3 +12,13 @@ $function_files = array(
 foreach ($function_files as $file) {
     include_once $functions_dir . $file;
 }
+
+
+function register_my_menus(){
+    register_nav_menus(
+        array(
+            'menu-404' => __('Menu 404', 'theme-tp')
+        )
+    );
+}
+add_action('init', 'register_my_menus');
